@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<div class="main">
+  <br><br>
+  
+      <button id="claimTaskBtn">Claim Rewards</button>
+</div>
+</body>
+<script src="/indexing.js"></script>
+<script>
+
+claimTaskBtn.addEventListener("click", () => {
+  let currentReward = parseFloat(localStorage.getItem("faucetReward")) || 0;
+  currentReward += 0.001; // Increase reward by $0.00005
+
+  // Save the updated reward to localStorage
+  localStorage.setItem("faucetReward", currentReward.toFixed(5));
+
+  // Update the display
+  
+
+  // Start the timer after claiming
+  document.getElementById('claimTaskBtn').style.display="none";
+  window.location.href="/task.html";
+});
+
+
+
+
+
+function clickon(){
+  
+  
+  
+}
+
+</script>
+
+</html>
