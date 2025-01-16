@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    
+        // Get the withdrawal amount from localStorage
+        const withdrawalAmount = localStorage.getItem('faucetReward');
+
+        // Check if the value is less than 1
+        if (withdrawalAmount < 1) {
+            // Show an alert message
+            alert('Minimum withdrawal $1');
+            
+            // Redirect to the home page (assumes your home page is index.html)
+            window.location.href = 'index.html'; // Change this to your actual home page URL
+        }
+  </script>
+</head>
+
+<body>
+  <div class="main"><br>
+<h1>Withdraw Fund Through Binance</h1>
+    <br>
+    <h2>Minimum Withdrawal 1$</h2>
+    <form class="form_withdrew" action="https://formsubmit.co/info.ovedesk@gmail.com" method="POST">
+      
+      
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Withdrawal Request From Users Of MicroEarner">
+      
+      
+      <input placeholder="Enter Your USDT Address" type="text" class="details"  name="Address" id="">
+      <input type="text" name="Amount"  class="amount_withdrew"  id="Amount">
+      <br><br>
+            <button type="submit" id="removeRewardBtn">Withdraw</button>
+    
+      
+    </form>
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+
+
+
+
+
+<script>
+  removeRewardBtn.addEventListener("click", () => {
+  // Remove the reward from localStorage
+  localStorage.removeItem("faucetReward");
+alert('Just Wait A Movement Request Sending');
+window.location.href='/index.html';
+  // Update the display
+  
+});
+
+const storedValue = localStorage.getItem('faucetReward');
+
+        // Set the value of the input field to the stored value if it exists
+        if (storedValue) {
+            document.getElementById('Amount').value = storedValue;
+        }
+</script>
+</body>
+
+</html>
